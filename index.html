@@ -65,13 +65,23 @@
 
         <script src="assets/javascript/game.js"></script>
 
-        <div id="musicControls" class="text-center">
-                <button class="btn btn-warning btn-xs theme-button">
-                  <span class="fa fa-music"></span> Play Theme!</button>
-                <button class="btn btn-dark btn-xs pause-button">
-                  <span class="fa fa-pause"></span> Pause Song</button>
-              </div>
+        <!--Music & Audio Controls-->
 
-    </body>
+        <div>
+            <audio id="gamemusic">
+                <source src="assets/ACDC-Highway-to-hell.mp3" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div id="musicControls" class="text-center">
+
+              <button id="playtheme" onclick="document.getElementById('gamemusic').play();">
+                    <span class="playtheme"></span> Play Theme!</button>
+             
+              <button id="pausetheme" onclick="document.getElementById('pausetheme').pause();">
+                    <span class="pausetheme"></span> Pause Song</button>
+    
+    
+  </body>
 
 </html>

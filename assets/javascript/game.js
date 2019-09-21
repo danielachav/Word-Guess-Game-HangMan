@@ -1,6 +1,5 @@
 
-var words = ["kiss", "acdc", "pinkfloyd", "queen", "ledzeppelin", "thewho", "rollingstones"];
-
+var words = ["kiss", "acdc", "pinkfloyd", "queen", "ledzeppelin", "thewho", "rollingstones", "theclash", "ramones", "beatles", "metallica", "zztop","steppenwolf"];
 
 var randomWord = "";
 var lettersOfWord = [];
@@ -34,6 +33,7 @@ function Game() {
     console.log(blanks);
     console.log(blanksAndCorrect);
 }
+
 
 function reset() {
     guessesRemaining = 9;
@@ -94,9 +94,6 @@ Game()
 
 document.onkeyup = function (event) {
 
-    var audioElement = document.createElement("audio");
-    audioElement.setAttribute("src", "assets/captainplanet24.mp3");
-
     var guesses = String.fromCharCode(event.keyCode).toLowerCase();
    
     checkLetters(guesses);
@@ -107,11 +104,3 @@ document.onkeyup = function (event) {
 
     document.getElementById("playerguesses").innerHTML = "  " + wrongGuess.join(" ");
 }
-
-// Theme Button
-$(".theme-button").on("click", function() {
-    audioElement.play();
-  });
-  $(".pause-button").on("click", function() {
-    audioElement.pause();
-  });
